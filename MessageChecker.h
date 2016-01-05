@@ -29,10 +29,10 @@ class MessageChecker : public Runnable {
  public :
    MessageChecker(Communication* moduleCom_, Drone* drone_);
    ~MessageChecker();
-   void* start();
+   void start();
    void* run();
    
-   int* addMsgToProcess(std::vector<std::string>* msg_tab);
+   int addMsgToProcess(std::vector<std::string>* msg_tab);
    
    static int isValid(char* msg, std::vector<std::string>* msg_tab);
    static uint32_t Adler32(char* msg, size_t len);
